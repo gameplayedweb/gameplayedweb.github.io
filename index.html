@@ -16,12 +16,15 @@
       align-items: center;
       justify-content: center;
       margin-top: 20px;
+      flex-wrap: wrap; /* Allow elements to wrap for smaller screens */
     }
     .header-title {
       font-size: 28px;
       font-weight: bold;
       margin-right: 20px;
       color: black;
+      flex: 1;
+      text-align: center;
     }
     .navbar {
       background-color: black;
@@ -31,6 +34,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 10px;
+      margin: 0 auto;
     }
     .navbar h1 {
       margin: 0;
@@ -65,6 +69,7 @@
       display: flex;
       justify-content: space-around;
       margin-top: 30px;
+      flex-wrap: wrap; /* Ensure images wrap on smaller screens */
     }
     .image-gallery img {
       width: 250px;
@@ -72,6 +77,7 @@
       border-radius: 10px;
       object-fit: cover;
       transition: transform 0.3s ease;
+      margin-bottom: 10px; /* Added margin for spacing between images */
     }
     .image-gallery img:hover {
       transform: scale(1.1);
@@ -106,6 +112,23 @@
       opacity: 1;
       transform: scale(1.05);
     }
+    
+    /* Ensure that everything looks good on mobile */
+    @media screen and (max-width: 768px) {
+      .navbar {
+        width: 90%; /* Make the navbar smaller on mobile */
+      }
+      .sub-navbar {
+        width: 95%; /* Make the sub-navbar smaller on mobile */
+      }
+      .header-title {
+        font-size: 24px; /* Adjust font size for header title */
+      }
+      .image-gallery img {
+        width: 100%; /* Make images full width on mobile */
+        height: auto; /* Keep aspect ratio intact */
+      }
+    }
   </style>
 </head>
 <body>
@@ -129,9 +152,10 @@
     </div>
     <img src="image3.png" alt="Image 3" />
   </div>
-<meta property="og:title" content="GamePlay's Cool Website" />
-<meta property="og:description" content="Welcome to the freakiest place on the web 👅" />
-<meta property="og:url" content="https://gameplayweb.fpr.net" />
-<meta property="og:type" content="website" />
+
+  <meta property="og:title" content="GamePlay's Cool Website" />
+  <meta property="og:description" content="Welcome to the freakiest place on the web 👅" />
+  <meta property="og:url" content="https://gameplayweb.fpr.net" />
+  <meta property="og:type" content="website" />
 </body>
 </html>
