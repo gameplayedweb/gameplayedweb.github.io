@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GamePlay's Cool Website</title>
+  <style>
+    body {
+      background-color: #bba8ff;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .header-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-right: 20px;
+      color: black;
+    }
+    .navbar {
+      background-color: black;
+      width: 60%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+      text-align: center;
+    }
+    .sub-navbar {
+      background-color: black;
+      width: 80%;
+      height: 40px;
+      margin: 10px auto;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    .sub-navbar .left-links {
+      display: flex;
+      gap: 48px;
+    }
+    .sub-navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .sub-navbar a:hover {
+      text-decoration: underline;
+    }
+    .image-gallery {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .image-gallery img {
+      width: 250px;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .image-gallery img:hover {
+      transform: scale(1.1);
+    }
+    .hover-image {
+      position: relative;
+      width: 250px;
+      height: 250px;
+    }
+    .hover-image img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      top: 0;
+      left: 0;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+    .hover-image .top {
+      opacity: 1;
+      z-index: 2;
+    }
+    .hover-image .bottom {
+      opacity: 0;
+      z-index: 1;
+    }
+    .hover-image:hover .top {
+      opacity: 0;
+    }
+    .hover-image:hover .bottom {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-title">GamePlay's Cool Website</div>
+    <div class="navbar">
+      <h1>Welcome to the website! Freaky stuff are going on here.. 👅</h1>
+    </div>
+  </div>
+  <div class="sub-navbar">
+    <div class="left-links">
+      <a href="info.html">Info</a>
+      <a href="facts.html">Facts</a>
+    </div>
+  </div>
+  <div class="image-gallery">
+    <img src="image1.png" alt="Image 1" />
+    <div class="hover-image">
+      <img src="image2.png" class="top" alt="Image 2" />
+      <img src="image02.png" class="bottom" alt="Image 2 Hover" />
+    </div>
+    <img src="image3.png" alt="Image 3" />
+  </div>
+</body>
+</html>
